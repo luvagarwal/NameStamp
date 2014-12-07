@@ -33,8 +33,8 @@ def print_letter(letter, date):
                 fp.write(uuid.uuid4().hex)
             date_str = '%s %s %s %s' % (month[date.month-1], date.day, '23:59:59', date.year)
             os.system('git add .')
-            os.system('git commit -m %s --date="%s"' % ('Zz...', date_str))
-            print date
+            os.system('git commit -m "%s" --date="%s"' %
+                ('commit by NameStamp (https://github.com/luviiit/NameStamp)', date_str))
         date += timedelta(1)
     return date
 
