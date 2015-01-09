@@ -32,7 +32,7 @@ def print_letter(letter, date):
             with open('/home/luv/gitrepos/mine/tmp/README.md', 'w') as fp:
                 fp.write(uuid.uuid4().hex)
             date_str = '%s %s %s %s' % (month[date.month-1], date.day, '23:59:59', date.year)
-            os.system('git add .')
+            os.system('git add README.md')
             os.system('git commit -m "%s" --date="%s"' %
                 ('commit by NameStamp (https://github.com/luviiit/NameStamp)', date_str))
         date += timedelta(1)
