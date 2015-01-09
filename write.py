@@ -15,13 +15,14 @@ def get_start_date():
 
 def print_nick():
     start_date = get_start_date()
+    false_repo = raw_input('Enter the path for the false repo: ')
     nick = raw_input('Enter your nick: ')
     nick = nick.upper()
-    os.chdir('/home/luv/gitrepos/mine/tmp')
+    os.chdir(false_repo)
     for i in nick:
         start_date = print_letter(i, start_date)
         start_date += timedelta(7)
-    os.system('git push')
+    os.system('git push origin master')
 
 def print_letter(letter, date):
     letter_bitmap = bitmap.alphabet[letter]
@@ -29,12 +30,13 @@ def print_letter(letter, date):
               'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
     for i in letter_bitmap:
         if i!=0:
-            with open('/home/luv/gitrepos/mine/tmp/README.md', 'w') as fp:
-                fp.write(uuid.uuid4().hex)
-            date_str = '%s %s %s %s' % (month[date.month-1], date.day, '23:59:59', date.year)
-            os.system('git add README.md')
-            os.system('git commit -m "%s" --date="%s"' %
-                ('commit by NameStamp (https://github.com/luviiit/NameStamp)', date_str))
+            for j in xrange(5):
+                with open('README.md', 'w') as fp:
+                    fp.write(uuid.uuid4().hex)
+                date_str = '%s %s %s %s' % (month[date.month-1], date.day, '23:59:59', date.year)
+                os.system('git add README.md')
+                os.system('git commit -m "%s" --date="%s"' %
+                    ('commit by NameStamp (https://github.com/luviiit/NameStamp)', date_str))
         date += timedelta(1)
     return date
 
