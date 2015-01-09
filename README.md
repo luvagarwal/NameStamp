@@ -2,4 +2,4 @@ USAGE
 --------
 To write your nick on the github contribution dashboard.
 
-![Image](/NameStamp/img.jpg?raw=True)
+![Image](img.jpg?raw=True)
