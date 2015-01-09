@@ -12,6 +12,10 @@ How To?
 
 To darken the name, run script multiple times.
 
+Undo the state of contribution board
+-------------------------------------
+Simply delete the new repo that you made for the false commits.
+
 Any Changes?
 ---------------
 Currently only upper case letters are supported. So it automatically converts your nick to uppercase string.
