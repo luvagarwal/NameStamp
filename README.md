@@ -22,4 +22,4 @@ Currently only upper case letters are supported. So it automatically converts yo
 To support other characters, they have to be added to the alphabets dictionary in bitmap.py and remove the autoconversion of nick to uppercase string.
 Pull requests are welcome :).
 
-For any issues mail me at agarwal.iiit@gmail.com
+For any issues mail me at luvagarwal.q@gmail.com
